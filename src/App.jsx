@@ -1,3 +1,7 @@
+import { motion } from 'framer-motion'
+import bladeImg from './assets/blade.png'
+import handleImg from './assets/handle.png'
+
 const featuredItems = [
   {
     name: 'Smoky Fire Burger',
@@ -22,9 +26,16 @@ const values = [
   'Fast, warm, and unforgettable'
 ]
 
+const mobileLinks = [
+  { label: 'Top', href: '#top' },
+  { label: 'Menu', href: '#menu' },
+  { label: 'Story', href: '#story' },
+  { label: 'Visit', href: '#visit' }
+]
+
 function App() {
   return (
-    <div className="app-shell">
+    <div className="app-shell" id="top">
       <header className="topbar">
         <div className="brand-block">
           <span className="brand-mark">Y</span>
@@ -40,6 +51,35 @@ function App() {
           <a className="nav-call" href="#visit">Order now</a>
         </nav>
       </header>
+
+      <motion.div
+        className="mobile-nav-shell"
+        initial={{ y: 90, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
+        <motion.img
+          className="knife-blade"
+          src={bladeImg}
+          alt=""
+          initial={{ x: -120, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+        />
+        <motion.img
+          className="knife-handle"
+          src={handleImg}
+          alt=""
+          initial={{ x: 120, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+        />
+        <nav className="mobile-nav-links" aria-label="Mobile navigation">
+          {mobileLinks.map((link) => (
+            <a key={link.label} href={link.href}>{link.label}</a>
+          ))}
+        </nav>
+      </motion.div>
 
       <main>
         <section className="hero">
