@@ -342,7 +342,7 @@ a {
   .mobile-nav-shell {
     display: block;
     position: fixed;
-    left: 50%;
+    left: calc(50% + 80px);
     bottom: 8px;
     transform: translateX(-50%);
     width: min(96vw, 500px);
@@ -353,42 +353,47 @@ a {
     box-shadow: none;
   }
 
+  /* Center the blade and handle absolutely and center nav links over them */
   .knife-blade,
   .knife-handle {
-    position: absolute;
+    position: absolute !important;
+    left: calc(-30%) !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
     object-fit: contain;
     pointer-events: none;
-    left: 0%;
-    top: 0%;
-    transform: translate(-50%, -50%);
   }
 
   .knife-blade {
-    width: min(92vw, 430px);
-    height: 132px;
-    left: -70%;
-    z-index: 0;
+    width: min(96vw, 760px) !important;
+    max-height: 210px !important;
+    height: auto !important;;
+    z-index: 0 !important;
   }
 
   .knife-handle {
-    height: 124px;
-    width: auto;
-    z-index: 1;
-    margin-left: 112px;
-    left: -10%;
+    height: 80px !important;
+    width: auto !important;
+    z-index: 2 !important;
+    left: -31.5% !important;
+    top: 47% !important;
+    /* nudge handle right so it visually connects to blade */
+    transform: translate(calc(-50% + 180px), -50%) !important;
   }
 
   .mobile-nav-links {
-    position: relative;
-    z-index: 2;
+    position: absolute !important;
+    left: calc(50% + 80px) !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 3 !important;
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0 24px;
-    left: -60%;
+    pointer-events: auto;
   }
 
   .mobile-nav-links a {
