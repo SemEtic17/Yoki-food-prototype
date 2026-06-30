@@ -383,7 +383,7 @@ a {
 
   .mobile-nav-links {
     position: absolute !important;
-    left: calc(50% + 80px) !important;
+    left: -30% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
     z-index: 3 !important;
