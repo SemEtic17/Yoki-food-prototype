@@ -384,7 +384,7 @@ a {
   .mobile-nav-links {
     position: absolute !important;
     left: -30% !important;
-    top: 50% !important;
+    top: 54% !important;
     transform: translate(-50%, -50%) !important;
     z-index: 3 !important;
     width: 100%;
@@ -397,13 +397,12 @@ a {
   }
 
   .mobile-nav-links a {
-    color: #2c2523;
+    color: rgb(87, 66, 66);
     text-decoration: none;
     font-size: 0.74rem;
     font-weight: 800;
     padding: 7px 9px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 12px rgba(44, 37, 35, 0.08);
   }
 }
