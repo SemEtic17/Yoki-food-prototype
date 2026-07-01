@@ -391,7 +391,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 20px !important;
     padding: 0 24px;
     pointer-events: auto;
   }
