@@ -27,11 +27,29 @@ const values = [
 ]
 
 const mobileLinks = [
-  { label: 'Top', href: '#top' },
-  { label: 'Menu', href: '#menu' },
-  { label: 'Story', href: '#story' },
-  { label: 'Visit', href: '#visit' }
+  { label: 'Top', href: '#top', icon: 'home' },
+  { label: 'Menu', href: '#menu', icon: 'menu' },
+  { label: 'Story', href: '#story', icon: 'story' },
+  { label: 'Visit', href: '#visit', icon: 'visit' }
 ]
+
+function MobileNavIcon({ type }) {
+  const common = { stroke: 'currentColor', strokeWidth: 1.8, fill: 'none', strokeLinecap: 'round', strokeLinejoin: 'round' }
+
+  if (type === 'menu') {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16" {...common} /><path d="M4 12h16" {...common} /><path d="M4 17h16" {...common} /></svg>
+  }
+
+  if (type === 'story') {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7" {...common} /><path d="M7 4v14" {...common} /></svg>
+  }
+
+  if (type === 'visit') {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z" {...common} /><circle cx="12" cy="11" r="2.2" {...common} /></svg>
+  }
+
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z" {...common} /></svg>
+}
 
 function App() {
   return (
@@ -76,7 +94,10 @@ function App() {
         />
         <nav className="mobile-nav-links" aria-label="Mobile navigation">
           {mobileLinks.map((link) => (
-            <a key={link.label} href={link.href}>{link.label}</a>
+            <a key={link.label} href={link.href} className="mobile-nav-link">
+              <span className="mobile-nav-icon"><MobileNavIcon type={link.icon} /></span>
+              <span>{link.label}</span>
+            </a>
           ))}
         </nav>
       </motion.div>
