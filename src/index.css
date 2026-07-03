@@ -282,6 +282,27 @@ a {
   font-weight: 700;
 }
 
+.menu-category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.menu-item-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #5e514c;
+  font-weight: 600;
+}
+
+.menu-item-row strong {
+  color: #2c2523;
+  font-weight: 700;
+}
+
 .menu-card p,
 .story-panel p,
 .visit-details {

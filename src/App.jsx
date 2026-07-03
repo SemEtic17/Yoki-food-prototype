@@ -2,21 +2,62 @@ import { motion } from 'framer-motion'
 import bladeImg from './assets/blade.png'
 import handleImg from './assets/handle.png'
 
-const featuredItems = [
+const menuCategories = [
   {
-    name: 'Smoky Fire Burger',
-    price: '520 ETB',
-    description: 'Double beef, melted cheddar, pickled onion, and a roasted garlic glaze.'
+    title: 'Breakfast',
+    items: [
+      { name: 'Omelet', price: '350 ETB' },
+      { name: 'Fetira', price: '350 ETB' },
+      { name: 'Scrambled Egg', price: '300 ETB' },
+      { name: 'Tuna Sandwich', price: '500 ETB' },
+      { name: 'Egg Sandwich', price: '300 ETB' },
+      { name: 'Club Sandwich', price: '700 ETB' }
+    ]
   },
   {
-    name: 'Golden Pepper Pizza',
-    price: '680 ETB',
-    description: 'Wood-fired crust with pepper jam, mozzarella, and a crackle of herbs.'
+    title: 'Burgers',
+    items: [
+      { name: 'Special Burger', price: '750 ETB' },
+      { name: 'Double Burger', price: '900 ETB' },
+      { name: 'Chicken Burger', price: '650 ETB' },
+      { name: 'Beef Burger', price: '600 ETB' },
+      { name: 'Cheese Burger', price: '650 ETB' }
+    ]
   },
   {
-    name: 'Crunch Street Wrap',
-    price: '440 ETB',
-    description: 'Crisp chicken, spicy slaw, and a bright sauce wrapped tight.'
+    title: 'Pizza',
+    items: [
+      { name: 'Special Pizza', price: '800 ETB' },
+      { name: 'Chicken Pizza', price: '700 ETB' },
+      { name: 'Beef Pizza', price: '700 ETB' },
+      { name: 'Margarita Pizza', price: '600 ETB' },
+      { name: 'Half Half Pizza', price: '700 ETB' },
+      { name: 'Al Tuna Pizza', price: '750 ETB' },
+      { name: 'Tuna Fasting', price: '600 ETB' },
+      { name: 'Vegetable Pizza', price: '600 ETB' }
+    ]
+  },
+  {
+    title: 'Wraps',
+    items: [
+      { name: 'Chicken Wrap', price: '500 ETB' },
+      { name: 'Beef Wrap', price: '500 ETB' },
+      { name: 'Veggi Wrap', price: '400 ETB' },
+      { name: 'Tuna Wrap', price: '500 ETB' }
+    ]
+  },
+  {
+    title: 'Drinks',
+    items: [
+      { name: 'Watermelon Juice', price: '250 ETB' },
+      { name: 'Orange Juice', price: '300 ETB' },
+      { name: 'Papaya Juice', price: '250 ETB' },
+      { name: 'Pineapple Juice', price: '250 ETB' },
+      { name: 'Mango Juice', price: '250 ETB' },
+      { name: 'Soft Drink', price: '80 ETB' },
+      { name: 'Soft Drink (P)', price: '100 ETB' },
+      { name: 'Water', price: '50 ETB' }
+    ]
   }
 ]
 
@@ -131,17 +172,23 @@ function App() {
 
         <section className="section" id="menu">
           <div className="section-heading">
-            <p className="eyebrow">Signature picks</p>
-            <h3>Built to stand out, made to be shared.</h3>
+            <p className="eyebrow">Menu</p>
+            <h3>Real dishes pulled from the lineup.</h3>
           </div>
           <div className="card-grid">
-            {featuredItems.map((item) => (
-              <article className="menu-card" key={item.name}>
+            {menuCategories.map((category) => (
+              <article className="menu-card" key={category.title}>
                 <div className="menu-card-top">
-                  <h4>{item.name}</h4>
-                  <span>{item.price}</span>
+                  <h4>{category.title}</h4>
                 </div>
-                <p>{item.description}</p>
+                <ul className="menu-category-list">
+                  {category.items.map((item) => (
+                    <li key={item.name} className="menu-item-row">
+                      <span>{item.name}</span>
+                      <strong>{item.price}</strong>
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
