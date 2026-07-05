@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState, useRef, useEffect } from 'react'
 import bladeImg from './assets/blade.png'
 import handleImg from './assets/handle.png'
 
@@ -133,13 +134,25 @@ function App() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         />
-        <nav className="mobile-nav-links" aria-label="Mobile navigation">
-          {mobileLinks.map((link) => (
-            <a key={link.label} href={link.href} className="mobile-nav-link">
+        <nav ref={navRef} className="mobile-nav-links" aria-label="Mobile navigation">
+          {mobileLinks.map((link, i) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="mobile-nav-link"
+              ref={(el) => (linkRefs.current[i] = el)}
+              onClick={(e) => { e.preventDefault(); setActiveIndex(i); window.location.hash = link.href }}
+            >
               <span className="mobile-nav-icon"><MobileNavIcon type={link.icon} /></span>
               <span>{link.label}</span>
             </a>
           ))}
+          <motion.div
+            className="mobile-underline"
+            initial={false}
+            animate={{ x: underline.x, width: underline.width }}
+            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          />
         </nav>
       </motion.div>
 
