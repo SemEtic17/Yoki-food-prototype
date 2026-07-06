@@ -158,12 +158,12 @@ function App() {
             <a
               key={link.label}
               href={link.href}
-              className="mobile-nav-link"
+              className={`mobile-nav-link ${activeIndex === i ? 'active' : ''}`}
               ref={(el) => (linkRefs.current[i] = el)}
               onClick={(e) => { e.preventDefault(); setActiveIndex(i); window.location.hash = link.href }}
             >
               <span className="mobile-nav-icon"><MobileNavIcon type={link.icon} /></span>
-              <span>{link.label}</span>
+              <span className="mobile-nav-label">{link.label}</span>
             </a>
           ))}
           <motion.div
