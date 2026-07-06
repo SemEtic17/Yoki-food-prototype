@@ -94,6 +94,25 @@ function MobileNavIcon({ type }) {
 }
 
 function App() {
+  const navRef = useRef(null)
+  const linkRefs = useRef([])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [underline, setUnderline] = useState({ x: 0, width: 0 })
+
+  useEffect(() => {
+    function update() {
+      const navEl = navRef.current
+      const linkEl = linkRefs.current[activeIndex]
+      if (!navEl || !linkEl) return
+      const navRect = navEl.getBoundingClientRect()
+      const linkRect = linkEl.getBoundingClientRect()
+      setUnderline({ x: linkRect.left - navRect.left, width: linkRect.width })
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [activeIndex])
+
   return (
     <div className="app-shell" id="top">
       <header className="topbar">
