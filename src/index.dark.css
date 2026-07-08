@@ -1,0 +1,87 @@
+@media (prefers-color-scheme: dark), .dark {
+  body {
+    background: linear-gradient(135deg, #100e11 0%, #1f1720 100%);
+    color: #f5efeb;
+  }
+
+  :root {
+    color: #f5efeb;
+    background: #100e11;
+  }
+
+  .topbar {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(17, 12, 16, 0.84);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.38);
+  }
+
+  .brand-mark {
+    background: linear-gradient(135deg, #8f1f50, #6d1f3b);
+    color: #fff;
+  }
+
+  .eyebrow,
+  .topbar h1,
+  .hero h2,
+  .section-heading h3,
+  .menu-card-top span,
+  .visit-details a,
+  .mobile-nav-links a {
+    color: #f5efeb;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5efeb;
+  }
+
+  .nav-call {
+    background: #f5efeb;
+    color: #2c2523 !important;
+  }
+
+  .hero-text,
+  .menu-item-row,
+  .menu-card p,
+  .story-panel p,
+  .visit-details,
+  .mobile-nav-links a {
+    color: #d8c8c2;
+  }
+
+  .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #f5efeb;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .hero-card,
+  .menu-card,
+  .story-panel,
+  .visit-card {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(21, 16, 20, 0.84);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  .hero-card-inner {
+    background: linear-gradient(145deg, rgba(22, 16, 20, 0.92) 0%, rgba(34, 24, 30, 0.98) 100%);
+  }
+
+  .plate {
+    background: #f5efeb;
+    box-shadow: inset 0 0 0 12px rgba(17, 12, 16, 0.08);
+  }
+
+  .menu-item-row strong {
+    color: #fff;
+  }
+
+  .mobile-nav-links a {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-underline {
+    background: #f5efeb;
+  }
+}
