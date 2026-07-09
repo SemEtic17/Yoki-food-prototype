@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark), .dark {
+@media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(135deg, #100e11 0%, #1f1720 100%);
     color: #f5efeb;
