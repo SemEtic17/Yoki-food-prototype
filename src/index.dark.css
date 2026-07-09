@@ -1,87 +1,91 @@
-@media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(135deg, #100e11 0%, #1f1720 100%);
-    color: #f5efeb;
-  }
+.dark {
+  color: #f5efeb;
+  background: #100e11;
+}
 
-  :root {
-    color: #f5efeb;
-    background: #100e11;
-  }
+.dark body {
+  background: linear-gradient(135deg, #100e11 0%, #1f1720 100%);
+  color: #f5efeb;
+}
 
-  .topbar {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(17, 12, 16, 0.84);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.38);
-  }
+.dark .topbar {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(17, 12, 16, 0.84);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.38);
+}
 
-  .brand-mark {
-    background: linear-gradient(135deg, #8f1f50, #6d1f3b);
-    color: #fff;
-  }
+.dark .brand-mark {
+  background: linear-gradient(135deg, #8f1f50, #6d1f3b);
+  color: #fff;
+}
 
-  .eyebrow,
-  .topbar h1,
-  .hero h2,
-  .section-heading h3,
-  .menu-card-top span,
-  .visit-details a,
-  .mobile-nav-links a {
-    color: #f5efeb;
-  }
+.dark .nav-links a,
+.dark .nav-links button {
+  color: #f5efeb;
+}
 
-  .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: #f5efeb;
-  }
+.dark .eyebrow,
+.dark .topbar h1,
+.dark .hero h2,
+.dark .section-heading h3,
+.dark .menu-card-top span,
+.dark .visit-details a,
+.dark .mobile-nav-links a {
+  color: #f5efeb;
+}
 
-  .nav-call {
-    background: #f5efeb;
-    color: #2c2523 !important;
-  }
+.dark .nav-links a:hover,
+.dark .nav-links button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5efeb;
+}
 
-  .hero-text,
-  .menu-item-row,
-  .menu-card p,
-  .story-panel p,
-  .visit-details,
-  .mobile-nav-links a {
-    color: #d8c8c2;
-  }
+.dark .nav-call {
+  background: #f5efeb;
+  color: #2c2523 !important;
+}
 
-  .btn-secondary {
-    border-color: rgba(255, 255, 255, 0.12);
-    color: #f5efeb;
-    background: rgba(255, 255, 255, 0.08);
-  }
+.dark .hero-text,
+.dark .menu-item-row,
+.dark .menu-card p,
+.dark .story-panel p,
+.dark .visit-details,
+.dark .mobile-nav-links a {
+  color: #d8c8c2;
+}
 
-  .hero-card,
-  .menu-card,
-  .story-panel,
-  .visit-card {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(21, 16, 20, 0.84);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
-  }
+.dark .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f5efeb;
+  background: rgba(255, 255, 255, 0.08);
+}
 
-  .hero-card-inner {
-    background: linear-gradient(145deg, rgba(22, 16, 20, 0.92) 0%, rgba(34, 24, 30, 0.98) 100%);
-  }
+.dark .hero-card,
+.dark .menu-card,
+.dark .story-panel,
+.dark .visit-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(21, 16, 20, 0.84);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
 
-  .plate {
-    background: #f5efeb;
-    box-shadow: inset 0 0 0 12px rgba(17, 12, 16, 0.08);
-  }
+.dark .hero-card-inner {
+  background: linear-gradient(145deg, rgba(22, 16, 20, 0.92) 0%, rgba(34, 24, 30, 0.98) 100%);
+}
 
-  .menu-item-row strong {
-    color: #fff;
-  }
+.dark .plate {
+  background: #f5efeb;
+  box-shadow: inset 0 0 0 12px rgba(17, 12, 16, 0.08);
+}
 
-  .mobile-nav-links a {
-    background: rgba(255, 255, 255, 0.08);
-  }
+.dark .menu-item-row strong {
+  color: #fff;
+}
 
-  .mobile-underline {
-    background: #f5efeb;
-  }
+.dark .mobile-nav-links a {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .mobile-underline {
+  background: #f5efeb;
 }

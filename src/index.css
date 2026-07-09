@@ -108,9 +108,30 @@ a {
   transition: background 180ms ease, color 180ms ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links button:hover {
   background: #f5efeb;
   color: #7a162b;
+}
+
+.nav-links button {
+  color: #2c2523;
+  background: transparent;
+  border: 1px solid rgba(122, 22, 43, 0.16);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.nav-links button svg {
+  width: 18px;
+  height: 18px;
 }
 
 .nav-call {
