@@ -197,6 +197,18 @@ function App() {
             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
           />
         </nav>
+        <button
+          type="button"
+          className="mobile-theme-toggle"
+          onClick={toggleDarkMode}
+          aria-label="Toggle theme"
+        >
+          {isDarkMode ? (
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.75V3m0 18v-1.75m7.25-7.25H21m-18 0H2.75m15.5 6.364 1.237 1.237m-12.474-12.474 1.237 1.237M18.25 7.75l1.237-1.237m-12.474 12.474 1.237-1.237M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          ) : (
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79Z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          )}
+        </button>
       </motion.div>
 
       <main>
