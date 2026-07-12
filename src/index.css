@@ -128,9 +128,10 @@ a {
   color: #7a162b;
 }
 
-.nav-links button {
+.nav-links button,
+.nav-theme-toggle {
   color: #2c2523;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(122, 22, 43, 0.16);
   width: 40px;
   height: 40px;
@@ -140,12 +141,56 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
-.nav-links button svg {
-  width: 18px;
-  height: 18px;
+.mobile-theme-toggle {
+  color: #2c2523;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(122, 22, 43, 0.16);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.nav-links button:hover,
+.nav-theme-toggle:hover,
+.mobile-theme-toggle:hover {
+  background: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.nav-links button svg,
+.nav-theme-toggle svg,
+.mobile-theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.mobile-theme-toggle {
+  position: absolute;
+  left: 20px;
+  right: auto;
+  top: 46%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(122, 22, 43, 0.18);
+}
+
+.dark .mobile-theme-toggle {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f5efeb;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-call {
